@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleOpen } from "../../redux/favourites";
 import { Button, HeaderContainer, SiteHeading } from "./HeaderStyle";
 
 export default function Header() {
   const dispatch = useDispatch();
+  const open = useSelector(({ favourites }) => favourites.open);
 
   const onClick = () => {
     dispatch(toggleOpen());
@@ -11,7 +12,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <SiteHeading>Red Ant Comics</SiteHeading>
-      <Button onClick={onClick} />
+      <Button onClick={onClick} open={open} />
     </HeaderContainer>
   );
 }

@@ -5,7 +5,7 @@ import {
   removeFavourite,
   selectFavouriteById,
 } from "../../../../redux/favourites";
-import { Button, CardContainer, ComicCard, Image, Title } from "./CardStyle";
+import { Button, CardContainer, Image, Title } from "./CardStyle";
 
 export default function Card({ comicId }) {
   const dispatch = useDispatch();
@@ -25,16 +25,12 @@ export default function Card({ comicId }) {
   };
   return (
     <CardContainer>
-      <ComicCard>
-        <Image
-          src={`${comic.thumbnail.path}/portrait_uncanny.jpg`}
-          alt={`${comic.title} image`}
-        />
-        <Title>{comic.title}</Title>
-        <Button onClick={onClick}>
-          {`${!favourite ? "Add to" : "Remove from"} favourites`}
-        </Button>
-      </ComicCard>
+      <Image
+        src={`${comic.thumbnail.path}/portrait_uncanny.jpg`}
+        alt={`${comic.title} image`}
+      />
+      <Title>{comic.title}</Title>
+      <Button onClick={onClick} favourite={favourite}></Button>
     </CardContainer>
   );
 }

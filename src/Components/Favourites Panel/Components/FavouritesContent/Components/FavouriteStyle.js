@@ -5,6 +5,7 @@ export const FavouriteContainer = styled.li`
   padding: 15px 50px 15px 15px;
   border-bottom: 1px solid #eaeaea;
   position: relative;
+  width: 343px;
 `;
 
 export const Title = styled.div``;
@@ -19,5 +20,4 @@ export const RemoveButton = styled.button`
   background: url(${remove}) 50% 50% no-repeat;
   background-size: 50%;
   border: 0;
-  opacity: 0.2;
 `;

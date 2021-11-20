@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-export const ContentContainer = styled.main`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px 0;
-`;
-export const ComicsList = styled.ul`
-  list-style: outside none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+export const ContentContainer = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-top: 75px;
+  padding: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  left: ${({ sidePanelOpen }) => (!sidePanelOpen ? "0" : "360px")};
+  width: ${({ sidePanelOpen }) =>
+    !sidePanelOpen ? "100%" : "calc(100% - 360px)"};
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 `;

@@ -14,11 +14,11 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 13px 13px 20px rgb(203 206 209), -13px -13px 20px rgb(255 255 255);
+  box-shadow: 13px 13px 20px rgb(223 206 209), -13px -13px 20px rgb(255 255 255);
   cursor: pointer;
   &:hover {
     transform: scale(1.05);
-    box-shadow: 13px 13px 40px rgb(203 206 209),
+    box-shadow: 13px 13px 40px rgb(223 206 209),
       -13px -13px 40px rgb(255 255 255);
   }
 `;

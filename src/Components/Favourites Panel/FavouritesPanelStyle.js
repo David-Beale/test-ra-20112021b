@@ -13,4 +13,5 @@ export const FavouritesPanelContainer = styled.div`
   max-width: ${({ open }) => (open ? 360 : 0)}px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  border-right: 1px solid rgb(204, 204, 204);
 `;

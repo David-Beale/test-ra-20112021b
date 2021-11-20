@@ -4,8 +4,8 @@ export const HeaderContainer = styled.div`
   height: 64px;
   text-align: center;
   line-height: 64px;
-  border-bottom: 1px solid #eaeaea;
-  width: 343px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  width: 360px;
 `;
 
 export const Title = styled.h2`

@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100vw;
-  box-shadow: 0px 13px 20px #cbced1;
+  box-shadow: 0px 13px 20px rgb(223, 206, 209);
   height: 64px;
   display: flex;
   align-items: center;
@@ -16,8 +16,8 @@ export const HeaderContainer = styled.header`
 export const SiteHeading = styled.div`
   text-transform: uppercase;
   color: #fff;
-  text-shadow: -1px -1px 6px #ec1d24, 1px -1px 6px #ec1d24, -1px 1px 6px #ec1d24,
-    1px 1px 6px #ec1d24;
+  text-shadow: -1px -1px 5px #ec1d24, 1px -1px 5px #ec1d24, -1px 1px 5px #ec1d24,
+    1px 1px 5px #ec1d24;
   font-size: 21px;
   letter-spacing: 2px;
   @media only screen and (min-width: 480px) {

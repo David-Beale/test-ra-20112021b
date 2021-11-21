@@ -7,7 +7,7 @@ import {
 } from "../../../../redux/favourites";
 import { Button, CardContainer, Image, Title } from "./CardStyle";
 
-export default function Card({ comicId }) {
+export default function Card({ comicId, style }) {
   const dispatch = useDispatch();
 
   const comic = useSelector((state) => selectComicById(state, comicId));
@@ -24,7 +24,7 @@ export default function Card({ comicId }) {
     }
   };
   return (
-    <CardContainer>
+    <CardContainer top={style.top} left={style.left}>
       <Image
         src={`${comic.thumbnail.path}/portrait_uncanny.jpg`}
         alt={`${comic.title} image`}

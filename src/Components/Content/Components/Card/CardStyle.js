@@ -3,7 +3,7 @@ import star from "../../../../Assets/images/star.svg";
 import redStar from "../../../../Assets/images/redStar.svg";
 
 export const CardContainer = styled.div`
-  position: relative;
+  position: absolute;
   height: 540px;
   width: 300px;
   background: rgb(236, 240, 243);
@@ -16,6 +16,8 @@ export const CardContainer = styled.div`
   justify-content: flex-start;
   box-shadow: 13px 13px 20px rgb(223 206 209), -13px -13px 20px rgb(255 255 255);
   cursor: pointer;
+  left: ${({ left }) => left}px;
+  top: ${({ top }) => top}px;
   &:hover {
     transform: scale(1.05);
     box-shadow: 13px 13px 40px rgb(223 206 209),

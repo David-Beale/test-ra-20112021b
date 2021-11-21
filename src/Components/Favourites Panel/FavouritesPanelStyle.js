@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FavouritesPanelContainer = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   top: 64px;
   left: 0;
   width: 100%;
@@ -14,4 +14,5 @@ export const FavouritesPanelContainer = styled.div`
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   border-right: 1px solid rgb(204, 204, 204);
+  box-shadow: 13px 0px 20px rgb(223, 206, 209);
 `;

@@ -5,6 +5,7 @@ export const HeaderContainer = styled.div`
   text-align: center;
   line-height: 64px;
   border-bottom: 1px solid rgb(204, 204, 204);
+  border-top: 1px solid rgb(204, 204, 204);
   width: 360px;
 `;
 

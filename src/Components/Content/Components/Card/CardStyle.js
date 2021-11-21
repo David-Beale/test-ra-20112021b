@@ -28,6 +28,10 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.div`
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
   font-size: 18px;

@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
   line-height: 64px;
   border-bottom: 1px solid rgb(204, 204, 204);
   border-top: 1px solid rgb(204, 204, 204);
-  width: 360px;
+  width: 100%;
 `;
 
 export const Title = styled.h2`

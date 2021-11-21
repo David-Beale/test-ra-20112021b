@@ -23,6 +23,9 @@ export const CardContainer = styled.div`
     box-shadow: 13px 13px 40px rgb(223 206 209),
       -13px -13px 40px rgb(255 255 255);
   }
+  @media only screen and (max-width: 480px) {
+    margin: 25px 0;
+  }
 `;
 
 export const Image = styled.img`

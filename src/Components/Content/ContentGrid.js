@@ -14,7 +14,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchComics, selectComicsIds } from "../../redux/comics";
 import Loading from "./Components/Loading/Loading";
 
-const COL_WIDTH = 350;
 const ROW_HEIGHT = 590;
 const OuterElement = forwardRef(({ children, onScroll }, ref) => {
   const sidePanelOpen = useSelector(({ favourites }) => favourites.open);
@@ -72,17 +71,22 @@ export default function ContentGrid() {
   }, []);
 
   const dimensions = useMemo(() => {
+    const colWidth = window.innerWidth > 480 ? 350 : 300;
+    const xPadding = window.innerWidth > 480 ? 50 : 10;
+    const yPadding = 50;
+    const yMargin = 50;
+
     const sidePanelAdj = sidePanelOpen ? -350 : 0;
-    const width = window.innerWidth - 50 + sidePanelAdj;
-    const height = window.innerHeight - 125;
-    const colCount = Math.max(Math.floor(width / COL_WIDTH), 1);
+    const width = window.innerWidth - xPadding + sidePanelAdj;
+    const height = window.innerHeight - yPadding - yMargin;
+    const colCount = Math.max(Math.floor(width / colWidth), 1);
 
     const itemCount = hasNextPage
       ? comicIds.length + colCount
       : comicIds.length;
 
     const rowCount = Math.ceil(itemCount / colCount);
-    return { itemCount, width, height, colCount, rowCount };
+    return { itemCount, width, height, colCount, colWidth, rowCount };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sidePanelOpen, hasNextPage, comicIds.length, resize]);
 
@@ -119,7 +123,7 @@ export default function ContentGrid() {
           height={dimensions.height}
           width={dimensions.width}
           columnCount={dimensions.colCount}
-          columnWidth={COL_WIDTH}
+          columnWidth={dimensions.colWidth}
           rowCount={dimensions.rowCount}
           rowHeight={ROW_HEIGHT}
           itemCount={dimensions.itemCount}

@@ -27,7 +27,7 @@ export const SiteHeading = styled.div`
 export const Button = styled.button`
   position: absolute;
   top: 14px;
-  left: 36px;
+  left: 10px;
   width: 36px;
   height: 36px;
   border: 3px solid red;

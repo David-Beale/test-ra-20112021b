@@ -5,7 +5,7 @@ export const FavouriteContainer = styled.li`
   padding: 15px 50px 15px 15px;
   border-bottom: 1px solid rgb(204, 204, 204);
   position: relative;
-  width: 360px;
+  width: 100%;
 `;
 
 export const Title = styled.div``;

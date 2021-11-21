@@ -5,12 +5,12 @@ export const FavouritesPanelContainer = styled.div`
   z-index: 4;
   top: 64px;
   left: 0;
-  width: 100%;
+  width: ${({ open }) => (open ? 360 : 0)}px;
   height: calc(100% - 64px);
   background: #ecf0f3;
   overflow-y: auto;
   overflow-x: hidden;
-  max-width: ${({ open }) => (open ? 360 : 0)}px;
+  max-width: 100vw;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   border-right: 1px solid rgb(204, 204, 204);

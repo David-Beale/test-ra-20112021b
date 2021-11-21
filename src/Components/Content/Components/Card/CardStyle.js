@@ -8,23 +8,23 @@ export const CardContainer = styled.div`
   width: 300px;
   background: rgb(236, 240, 243);
   border-radius: 25px;
-  margin: 25px;
+  margin: 25px 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   box-shadow: 13px 13px 20px rgb(223 206 209), -13px -13px 20px rgb(255 255 255);
-  cursor: pointer;
   left: ${({ left }) => left}px;
   top: ${({ top }) => top}px;
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 13px 13px 40px rgb(223 206 209),
-      -13px -13px 40px rgb(255 255 255);
-  }
-  @media only screen and (max-width: 480px) {
-    margin: 25px 0;
+
+  @media only screen and (min-width: 480px) {
+    margin: 25px;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 13px 13px 40px rgb(223 206 209),
+        -13px -13px 40px rgb(255 255 255);
+    }
   }
 `;
 
@@ -56,13 +56,16 @@ export const Button = styled.button`
     no-repeat;
   background-color: rgba(0, 0, 0, 0.2);
   background-size: 60%;
-  &:hover {
-    background-color: rgba(236, 29, 36, 0.3);
-    background-color: rgba(
-      236,
-      29,
-      36,
-      ${({ favourite }) => (favourite ? "0.3" : "0.7")}
-    );
+  cursor: pointer;
+  @media only screen and (min-width: 480px) {
+    &:hover {
+      background-color: rgba(236, 29, 36, 0.3);
+      background-color: rgba(
+        236,
+        29,
+        36,
+        ${({ favourite }) => (favourite ? "0.3" : "0.7")}
+      );
+    }
   }
 `;

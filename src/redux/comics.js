@@ -40,7 +40,7 @@ export const fetchComics = () => async (dispatch) => {
   const { comics, error } = await MarvelApi.fetchComics(lastVisible);
   loading = false;
   if (error) {
-    dispatch(setError);
+    dispatch(setError());
     return;
   }
   lastVisible += comics.length;

@@ -2,7 +2,12 @@ import styled from "styled-components";
 import star from "../../../../Assets/images/star.svg";
 import redStar from "../../../../Assets/images/redStar.svg";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div.attrs((props) => ({
+  style: {
+    left: `${props.left}px`,
+    top: `${props.top}px`,
+  },
+}))`
   position: absolute;
   height: 540px;
   width: 300px;
@@ -15,8 +20,6 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   box-shadow: 13px 13px 20px rgb(223 206 209), -13px -13px 20px rgb(255 255 255);
-  left: ${({ left }) => left}px;
-  top: ${({ top }) => top}px;
 
   @media only screen and (min-width: 480px) {
     margin: 25px;

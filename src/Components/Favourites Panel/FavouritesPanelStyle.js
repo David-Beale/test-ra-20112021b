@@ -5,7 +5,8 @@ export const FavouritesPanelContainer = styled.div`
   z-index: 4;
   top: 64px;
   left: 0;
-  width: ${({ open }) => (open ? 360 : 0)}px;
+  width: 360px;
+  transform: translateX(${({ open }) => (open ? 0 : "-100%")});
   height: calc(100% - 64px);
   background: #ecf0f3;
   overflow-y: auto;

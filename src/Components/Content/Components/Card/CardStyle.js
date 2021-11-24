@@ -14,17 +14,18 @@ export const CardContainer = styled.div.attrs((props) => ({
   background: rgb(236, 240, 243);
   border-radius: 25px;
   margin: 25px 0;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   box-shadow: 13px 13px 20px rgb(223 206 209), -13px -13px 20px rgb(255 255 255);
-
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
   @media only screen and (min-width: 480px) {
     margin: 25px;
     &:hover {
-      transform: scale(1.05);
+      z-index: 2;
       box-shadow: 13px 13px 40px rgb(223 206 209),
         -13px -13px 40px rgb(255 255 255);
     }
@@ -33,6 +34,8 @@ export const CardContainer = styled.div.attrs((props) => ({
 
 export const Image = styled.img`
   width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 `;
 
 export const Title = styled.div`
@@ -45,12 +48,13 @@ export const Title = styled.div`
   font-size: 18px;
   padding: 10px;
   overflow: hidden;
+  transform: translateZ(20px);
 `;
 
 export const Button = styled.button`
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 15px;
+  right: 15px;
   width: 36px;
   height: 36px;
   border: 1px solid #fff;
@@ -60,6 +64,7 @@ export const Button = styled.button`
   background-color: rgba(0, 0, 0, 0.2);
   background-size: 60%;
   cursor: pointer;
+  transform: translateZ(20px);
   @media only screen and (min-width: 480px) {
     &:hover {
       background-color: rgba(236, 29, 36, 0.3);

@@ -104,6 +104,9 @@ textarea {
 body {
   background: rgb(236, 240, 243);
 }
+.js-tilt-glare {
+  border-radius: 25px;
+}
 
 /* ==========================================================================
       Helper classes

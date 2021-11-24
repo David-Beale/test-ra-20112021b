@@ -2,9 +2,7 @@ export class MarvelApi {
   static fetchComics = async (offset) => {
     const base = "https://gateway.marvel.com/v1/public/comics?";
     const parameters = {
-      apikey: "3cb62d086d5debdeea139095cbb07fe4",
-      ts: "redant",
-      hash: "140e85a50884cef76d614f6dacada288",
+      apikey: "cbb4d7cc23d84e48f845f3a4dc0ea39b",
       offset,
     };
     const url =
